@@ -7,22 +7,66 @@ package com.java.primitive.types;
 public class App {
 	public static void main(String[] args) {
 
-		// byte-short-[character]-int-long-float-double
-		
+		// byte-short-[character]-int-long-float-double are the integral data
+		// types
+
 		// characterDataType();
+		shortDataType();
 		// intDataType();
 		// booleanDataType();
 		// byteDataType();
-		
-		
+		// longDataType();
+		// floatDataType();
+
+		// doubleDataType();
+
 	}
 
-	public static void longDataType()
-	{
-		long l=10;
-		long k='c';
-		
+	public static void doubleDataType() {
+		double d1 = 2.45;
+
+		System.out.println(d1);
+
+		System.out.println(Double.BYTES);
+		System.out.println(Double.SIZE);
+		System.out.println(Double.MAX_VALUE + "," + Double.MIN_VALUE);
 	}
+
+	public static void floatDataType() {
+		float fl1 = Long.MAX_VALUE;// 2.3f;
+
+		System.out.println(fl1);
+
+		System.out.println(Float.BYTES);
+		System.out.println(Float.SIZE);
+		System.out.println(Float.MAX_VALUE + "," + Float.MIN_VALUE);
+
+	}
+
+	public static void shortDataType() {
+		short l = 10;
+
+		System.out.println(l);
+		System.out.println(Short.BYTES);
+		System.out.println(Short.SIZE);
+		System.out.println(Short.MAX_VALUE + "," + Short.MIN_VALUE);
+
+	}
+
+	public static void longDataType() {
+		long l = 10L;
+		long k = 'c';
+		long r = 10;
+		// int x=100000000000000000;
+		long y = 1000000000000000000L;
+
+		System.out.println(y);
+		System.out.println(Long.BYTES);
+		System.out.println(Long.SIZE);
+		System.out.println(Long.MAX_VALUE + "," + Long.MIN_VALUE);
+
+	}
+
 	public static void byteDataType() {
 		byte b = 127;
 		byte c = -128;
@@ -60,7 +104,7 @@ public class App {
 	}
 
 	public static void intDataType() { // 1.0
-		
+
 		int x = 10;
 		System.out.println(x);
 
