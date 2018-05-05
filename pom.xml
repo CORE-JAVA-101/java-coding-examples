@@ -29,5 +29,11 @@
     <module>datetime</module>
     <module>annotations</module>
     <module>regex</module>
+    <module>exceptions</module>
+    <module>serialization</module>
+    <module>oops</module>
+    <module>operators</module>
+    <module>arrays</module>
+    <module>innerclass</module>
   </modules>
 </project>

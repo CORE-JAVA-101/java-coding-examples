@@ -1,5 +1,7 @@
 package com.java.wrapper.types;
 
+import java.io.IOException;
+
 public class App {
 	/**
 	 * 
@@ -10,17 +12,29 @@ public class App {
 	 * to wrap a primitive, to adapt a java primitive to java.lang.Object . No.
 	 * String is not a wrapper class, simply because there is no parallel
 	 * primitive type that it wraps.
+	 * @throws IOException 
 	 * 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		// Serializable and Comparable
 
 		// booleanDataType();
 		// characterDataType();
 		// shortDataType();
+		// intDataType();
+		// longDataType();
+		
+	}
 
-		intDataType();
+  private static void longDataType() {
+		long x = 287654326789L;
+
+		Long l = new Long(x);
+
+		System.out.println(l.shortValue());
+		System.out.println(l.getClass());
+		System.out.println(Long.bitCount(20L));
 	}
 
 	private static void intDataType() {
@@ -32,10 +46,15 @@ public class App {
 		System.out.println(xx.intValue());
 		System.out.println(xx.getClass());
 
-		System.out.println(Integer.bitCount(x));
+		System.out.println(Integer.bitCount(x));// number of 1's in the 2s
+												// compliment of the given
+												// number
 		System.out.println(Integer.parseInt("123"));
 		System.out.println(Integer.parseInt("101", 2));
 		System.out.println(Integer.valueOf(10));
+		System.out.println(Integer.valueOf("234"));
+		System.out.println(Integer.valueOf("234", 5));
+
 	}
 
 	public static void shortDataType() {
@@ -92,3 +111,4 @@ public class App {
 	}
 
 }
+

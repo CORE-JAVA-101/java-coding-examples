@@ -1,0 +1,70 @@
+
+There are two types of nested classes you can create in Java.
+Non-static nested class (inner class)
+Static nested class
+
+#1092: Non-static inner class
+Non-static nested class is a class within another class, where the class has access to members of the enclosing class (outer class).
+It is commonly known as inner class.
+Since, inner class exists within the outer class (in order to instantiate an inner class, you must first instantiate the outer class).
+
+#1093: Accessing Members of Outer Class within Inner Class
+This is possible using Java "this" keyword. 
+Inside the B inner class, we used this keyword to get access to the member variable text of outer class A as:
+A.this.text;
+
+This is possible even though the "text" is a private member of "A" class.
+You can also see, we've used A.this to access members of A. 
+If you had only used "this" instead of A.this, 
+then it would only represent members inside the B class.
+
+#1094: Static Inner Class
+Unlike inner class, static nested class cannot access the member variables of the outer 
+class because static nested class doesn't require you to create an instance of outer class. 
+Hence, no reference of the outer class exists with OuterClass.this.
+
+So, you can create instance of static nested class directly like this:
+OuterClass.InnerClass obj = new OuterClass.InnerClass();
+
+#1095: Accessing members of Outer class inside Static Inner Class
+Exception in thread "main" java.lang.Error: Unresolved compilation problem: 
+	No enclosing instance of the type A2 is accessible in scope
+This is because, no reference of outer class A2 is stored in A2.this
+
+-we can define static method inside static nested class.
+-static nested class can access outer static members and own members
+#########NOTES
+Java treats inner class as a regular member of a class. 
+They are just like methods and variables declared inside a class.
+
+Since, inner class are members of outer class, 
+you can apply any access modifiers like private, protected to your inner class which is not possible in normal classes.
+
+Since Nested class is a member of its enclosing class Outer, 
+you can use . (dot) notation to access Nested class and its members.
+
+Using nested class will make your code more readable and provide better encapsulation.
+
+Non-static nested classes (inner classes) have access to other members of the outer/enclosing class, 
+even if they are declared private.
+#######END
+
+#1096: Method local inner class
+If a class is defined in a method body, it’s known as local inner class.
+
+Since local inner class is not associated with Object, 
+we can’t use private, public or protected access modifiers with it. 
+The only allowed modifiers are abstract or final.
+
+A local inner class can access all the members of the enclosing class and 
+local final variables in the scope it’s defined.
+
+#1097: we can’t have static method in a nested inner class because an inner class is 
+implicitly associated with an object of its outer class so it cannot define 
+any static method for itself. If we define it leads to CE.
+
+#1098_1: Annonoymous inner class with extends Approach
+
+#1098_2: Annonoymous inner class with implements Approach
+
+
