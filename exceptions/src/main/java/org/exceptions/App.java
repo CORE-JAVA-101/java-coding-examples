@@ -14,13 +14,35 @@ public class App {
 		// A11.main(null);
 		// A12.main(null);
 		// A13.main(null);
+		A14.main(null);
 
+	}
+}
+
+class A15 {
+	public static void main(String[] args) {
+		m1();
 	}
 }
 
 class A14 {
 	public static void main(String[] args) {
-		// m1();
+		m1();
+	}
+
+	private static void m1() {
+		try {
+			try {
+				throw new Exception("xyz");
+			} finally {
+				System.out.println("1");
+			}
+
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		} finally {
+			System.out.println("2");
+		}
 	}
 }
 
@@ -40,7 +62,7 @@ class A13 {
 
 		} catch (ArithmeticException e) {
 			System.out.println(e.getMessage());// AE cannot be handled here as
-												// it is not occured in the
+												// it is not occurred in the
 												// first try block
 		}
 
