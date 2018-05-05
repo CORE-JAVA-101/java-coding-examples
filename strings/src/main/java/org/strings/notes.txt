@@ -1,0 +1,38 @@
+#################################################
+Hashcode() and equals() concept is
+#################################################
+[
+FROM JAVADOC:
+
+1) If two objects are equal according to the {@code equals(Object)}
+          method, then calling the {@code hashCode} method on each of
+          the two objects must produce the same integer result.
+		  
+2) It is <em>not</em> required that if two objects are unequal
+          according to the {@link java.lang.Object#equals(java.lang.Object)}
+          method, then calling the {@code hashCode} method on each of the
+          two objects must produce distinct integer results.  However, the
+          programmer should be aware that producing distinct integer results
+          for unequal objects may improve the performance of hash tables.
+
+]
+1) If two Objects are equal according to equal(), then calling the hashcode method on each of those two objects should produce same hashcode.
+
+and other one is
+
+2) It is not required that if two objects are unequal according to the equal(), then calling the hashcode method on each of the two objects must produce distinct values.
+i.e Aa and BB are unequal but will give same hashcode.
+i.e AA and BB are unequal and they have different hashcode.
+
+ In the real world two Strings may have the same hash code. For instance, if you want to store all string combinations that contain lowercase English letters (like "aaaaaaaaaa","aaaaaaaaab" and so on) of length 10, you can't assign a unique hash code to each of the 141.167.095.653.376 combinations, since int in Java is 32-bit and, therefore, can have up to 4.294.967.296 distinct values.
+
+3) If two objects have the same hashcode then they are NOT necessarily equal. Otherwise you will have discovered the perfect hash function.(Hashmap key collision) But the opposite is true - if the objects are equal ,then they must have the same hashcode.Mar 26, 2011[https://stackoverflow.com/questions/5443136/are-two-java-objects-with-same-hashcodes-not-necessarily-equal]
+
+Unequal objects must have different hash codes – WRONG!
+     Aa and BB =2112. so may or may not be.
+Objects with the same hash code must be equal – WRONG!
+
+[https://eclipsesource.com/blogs/2012/09/04/the-3-things-you-should-know-about-hashcode/]
+
+4) Objects with different hash must be unequal.- CORRECT
+I.E. if you call hashcode on a given object and you are getting the hashcode different then hash code is absurd. i.e 2 hash pointing to same object which is invalid or violating rule 1. hence unequal hashcode will have unequal objects.

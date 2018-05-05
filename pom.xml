@@ -35,5 +35,6 @@
     <module>operators</module>
     <module>arrays</module>
     <module>innerclass</module>
+    <module>strings</module>
   </modules>
 </project>
